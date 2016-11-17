@@ -19,4 +19,12 @@
     }
   });
 
+  $(document).ready(function() {
+    $.getJSON('/api/suggestions.php').then(function(data) {
+      $(input).autocomplete({
+        source: Object.keys(data)
+      });
+    });
+  });
+
 })();
