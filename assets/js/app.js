@@ -25,6 +25,23 @@
         source: Object.keys(data)
       });
     });
+
+    $('.search-bar').on('submit', function(e) {
+      e.preventDefault();
+      $.getJSON('/api/result.php', $(this).serialize()).then(function(data) {
+        $('section').hide();
+
+        if (data.found) {
+          $('#found-bin').text(data.binName);
+          $('#found-img')
+            .attr('alt', 'Ricicla come ' + data.binName)
+            .attr('src', '/assets/images/bin-' + data.bin + '.png');
+          $('#section-found').show();
+        } else {
+          $('#section-not-found').show();
+        }
+      });
+    });
   });
 
 })();
