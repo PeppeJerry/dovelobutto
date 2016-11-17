@@ -1,4 +1,25 @@
-<?php $title = 'Result'; require('./partials/head.php'); ?>
+<?php 
+  $title = 'Result';
+
+  require('./partials/head.php');
+  require('./mock.php');
+
+  $requested = strtolower($_GET['object']);
+  if (isset($mock[$requested])) {
+    $found = True;
+
+    $translated = array(
+      "plastic" => "plastica",
+      "glass" => "vetro",
+      "paper" => "carta"
+    );
+    $bin = $mock[$requested];
+    $binName = $translated[$bin];
+  } else {
+    $found = False;
+  }
+
+?>
 
 <div class="response-page plastic">
   <div class="navbar">
@@ -10,13 +31,13 @@
   </div>
 
   <div id="response" class="lets-move pop-up-2s">
-    <figure>
-      <img src="/assets/images/bin-plastic.png" alt="Ricicla come plastica">
-    </figure>
-    <article>
-      <h4>Ricicla come</h4>
-      <h2>PLASTICA</h2>
-    </article>
+    <?php 
+      if ($found) {
+        require('./result-found.php');
+      } else {
+        require('./result-not-found.php');
+      }
+    ?>
   </div>
 </div>
 
