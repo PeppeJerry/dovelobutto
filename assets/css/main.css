@@ -600,6 +600,7 @@ section {
   min-height: 100%;
   background-color: #222;
   color: #d7d7d7;
+  transition: background .2s ease-in;
   display: -webkit-flex;
   display: -moz-flex;
   display: flex;
@@ -634,6 +635,8 @@ section {
     background-color: #c1a71e; }
   .response-page.paper {
     background-color: #28527b; }
+  .response-page.glass {
+    background-color: #66b15d; }
 
 .navbar {
   width: 100%;

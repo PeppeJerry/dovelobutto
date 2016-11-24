@@ -30,6 +30,9 @@
       e.preventDefault();
       $.getJSON('/api/result.php', $(this).serialize()).then(function(data) {
         $('section').hide();
+        $('#response-page')
+          .attr('class', '')
+          .addClass('response-page');
 
         if (data.found) {
           $('#found-bin').text(data.binName);
@@ -38,8 +41,6 @@
             .attr('src', '/assets/images/bin-' + data.bin + '.png');
           $('#section-found').show();
           $('#response-page')
-            .attr('class', '')
-            .addClass('response-page')
             .addClass(data.bin);
         } else {
           $('#section-not-found').show();

@@ -3,6 +3,7 @@
   min-height: 100%;
   background-color: #222;
   color: #d7d7d7;
+  transition: background .2s ease-in;
 
   @include flexbox;
   @include flex('flex-direction', 'column');
