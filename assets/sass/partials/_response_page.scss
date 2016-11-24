@@ -1,6 +1,8 @@
 .response-page {
   width: 100%;
   min-height: 100%;
+  background-color: #222;
+  color: #d7d7d7;
 
   @include flexbox;
   @include flex('flex-direction', 'column');
@@ -14,7 +16,7 @@
     figure {
       width: 128px;
       height: 200px;
-      margin: 0 auto; 
+      margin: 0 auto;
 
       img { max-width: 100%; }
     }
@@ -46,11 +48,9 @@
   // so we need to declare all the possible combinations.
   &.plastic {
     background-color: #c1a71e;
-    color: #d7d7d7;
   }
 
   &.paper {
     background-color: #28527b;
-    color: #d7d7d7;
   }
 }

@@ -1,6 +1,6 @@
 <?php $title = 'DoveLoButto'; require('./partials/head.php'); ?>
 
-<div class="response-page plastic">
+<div id="response-page" class="response-page">
   <div class="navbar">
     <?php require('./partials/header.php'); ?>
     <form action="/result.php" method="get" class="search-bar">
@@ -11,12 +11,12 @@
 
   <section id="section-index">
     <p>
-      <strong>DoveLoButto</strong> ti permette di scoprire velocemente e 
+      <strong>DoveLoButto</strong> ti permette di scoprire velocemente e
       facilmente come riciclare tutto ciò che ti passa per le mani.
     </p>
     <p>
-      La raccolta differenziata non è facile come sembra e questo servizio 
-      nasce apposta per facilitarla, fornendo alle persone uno strumento 
+      La raccolta differenziata non è facile come sembra e questo servizio
+      nasce apposta per facilitarla, fornendo alle persone uno strumento
       utile e facile da usare.
     </p>
   </section>
