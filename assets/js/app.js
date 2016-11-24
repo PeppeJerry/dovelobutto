@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-  
+
   // Control for empty input in the search bar.
   var searchBar = document.querySelector(".search-bar");
   var input = document.querySelector(".search-bar input[type='text']");
@@ -37,6 +37,10 @@
             .attr('alt', 'Ricicla come ' + data.binName)
             .attr('src', '/assets/images/bin-' + data.bin + '.png');
           $('#section-found').show();
+          $('#response-page')
+            .attr('class', '')
+            .addClass('response-page')
+            .addClass(data.bin);
         } else {
           $('#section-not-found').show();
         }
