@@ -1,0 +1,57 @@
+.search-bar {
+  width: 50%;
+
+  @include flexbox;
+  @include flex('flex-direction', 'row');
+
+  input {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 5px 10px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    width: 90%;
+  }
+
+  input[type='text'] {
+    width: 100%;
+    height: 42px;
+
+    border: 1px solid #d7d7d7;
+    border-radius: 3px 0 0 3px;
+
+    font-family: inherit;
+    text-transform: uppercase;
+
+    background-color: #e7e7e7;
+    color: #777;
+
+    // This class is toggled via JavaScript when an empty search is done.
+    &.warning {
+      border-color: #e74c3c;
+    }
+  }
+
+
+  // The submit's button for the search bar is unusual but special.
+  // It consists in a 42x42 vectorial image about recycling.
+  input[type='image'] {
+    height: 42px;
+
+    background-color: #e74c3c;
+    color: #fff;
+
+    border: 1px solid #e74c3c;
+    border-radius: 0 3px 3px 0;
+
+    outline: 0;
+  }
+
+  input[type='image']:active {
+    -webkit-box-shadow: inset 1px 1.5px 1px #c0392b;
+       -moz-box-shadow: inset 1px 1.5px 1px #c0392b;
+            box-shadow: inset 1px 1.5px 1px #c0392b;
+  }
+}

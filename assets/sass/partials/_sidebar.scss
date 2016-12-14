@@ -1,0 +1,22 @@
+.sidebar {
+  width: 420px;
+  min-height: 100%;
+
+  @include flexbox;
+  @include flex('flex-direction', 'column');
+  @include flex('justify-content', 'center');
+  @include flex('align-items', 'center');
+
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 15px;
+
+  background-color: #222;
+  color: #ccc;
+
+  // I need to see for better ideas
+  @media only screen and (max-width: 992px) {
+    display: none;
+  }
+}

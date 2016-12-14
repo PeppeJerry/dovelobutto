@@ -1,0 +1,11 @@
+@mixin flexbox() {
+  display: -webkit-flex;
+  display:    -moz-flex;
+  display:         flex;
+}
+
+@mixin flex($property, $value) {
+  -webkit-#{$property}: #{$value};
+     -moz-#{$property}: #{$value};
+          #{$property}: #{$value};
+}

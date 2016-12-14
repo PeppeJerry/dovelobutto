@@ -1,0 +1,58 @@
+.navbar {
+  width: 100%;
+
+  @include flexbox;
+  @include flex('flex-direction', 'row');
+
+  position: absolute;
+  top: 0;
+
+  // Contains a link to the homepage
+  header {
+    width: 100%;
+    height: 60px;
+
+    a {
+      height: 100%;
+      display: block;
+
+      @include flexbox;
+      @include flex('align-items', 'center'); // Align items vertically
+
+      color: inherit;
+      text-decoration: none;
+
+      margin: 0 20px;
+
+      h1 {
+        font-size: 20px;
+        font-weight: normal;
+      }
+
+      img {
+        max-width: 100%;
+        margin-right: 10px;
+      }
+
+      @media only screen and (max-width: 767px) {
+        @include flex('justify-content', 'center');
+        margin: 0;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    @include flex('flex-wrap', 'wrap');
+  }
+
+  // Edit the standard search bar used across the website
+  .search-bar {
+    margin-right: 20px;
+    @include flex('align-self', 'center');
+
+    @media only screen and (max-width: 767px) {
+      width: 70%;
+      margin: 0 15%; // We use percentage in order to center it
+    }
+  }
+}

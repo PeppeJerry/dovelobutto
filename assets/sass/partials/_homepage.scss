@@ -1,0 +1,39 @@
+.homepage {
+  width: 100%;
+  min-height: 100%;
+
+  @include flexbox;
+  @include flex('flex-direction', 'row');
+
+  // Edit the standard navigation bar used across the website
+  .navbar {
+    color: #d7d7d7;
+    font-family: inherit;
+
+    @media only screen and (max-width: 992px) {
+      background-color: #222; // Fallback for old browsers
+      background-color: rgba(24, 24, 24, 0.25);
+    }
+
+    header {
+      a {
+        @media only screen and (max-width: 992px) {
+          @include flex('justify-content', 'center');
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 992px) {
+    height: 100%;
+    @include flex('flex-direction', 'column');
+  }
+}
+
+section {
+    width: 70%;
+    max-width: 900px;
+    text-align: center;
+    margin: auto;
+}
