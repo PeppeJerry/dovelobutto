@@ -18,7 +18,6 @@
                     var value = data[key].product_name;
                     products.push(value);
                 }
-                console.log(products);
               $("#input-bar").autocomplete({
 
                 /* Max 10 items will be displayed */
