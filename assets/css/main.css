@@ -736,3 +736,45 @@ section {
   .email-page .navbar {
     background: #222;
     color: #fff; }
+  .button {
+    font-size: 100%;
+    font-family: inherit;
+    height: 50px;
+    width: 50%;
+    margin-left: 10px;
+    border: 1px solid #d7d7d7;
+    border-radius: 3px 0 0 3px;
+    background-color: #e7e7e7;
+    text-transform: uppercase;
+  }
+  #email-bar
+  {
+    border: 1px solid #d7d7d7;
+    border-radius: 3px 0 0 3px;
+    background-color: #e7e7e7;
+    text-align: center;
+    font-weight: bold;
+    color: #777;
+    padding: 5px 10px;
+    width: 70%;
+    height: 32px;
+    font-size: 100%;
+  }
+
+  @media only screen and (max-width: 767px){
+    article
+    {
+        margin-top: 10%;
+    }
+    .button
+    {
+        height: 50px;
+        width: 70%;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    #email-bar
+    {
+        width: 100%;
+    }
+}
