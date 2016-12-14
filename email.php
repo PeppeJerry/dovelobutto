@@ -23,7 +23,7 @@
       <p>Ti invieremo al più presto un'email a: <?php echo $email_address ?>
       <p> Prodotto cercato : <?php echo $product_searched ?> </p>
       <b></b></p>
-      <a href="index.php"><button>Torna alla home</button></a>
+      <a href="index.php"><button class="button">Torna alla home</button></a>
     </article>
   </div>
 </div>
