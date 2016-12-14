@@ -32,7 +32,7 @@
     });
     $('.search-bar').on('submit', function(e) {
       e.preventDefault();
-      if("#input-bar".value !== "")
+      if($("#input-bar").val() !== "")
       {
         $.getJSON('/api/result.php', $(this).serialize()).then(function(data) {
           $('section').hide();
@@ -49,10 +49,8 @@
             $('#response-page')
               .addClass('bin-'+data.bin);
           } else {
-            var labelSearchedProduct = document.querySelector('#product-searched');
-            labelSearchedProduct.textContent = data.product_searched;
-            var inputSearchedProduct = document.querySelector('#product-name');
-            inputSearchedProduct.setAttribute("value", data.product_searched);
+            $('#product-searched').text(data.product_searched);
+            $('#product-name').val(data.product_searched);
             $('#section-not-found').show();
           }
         });
