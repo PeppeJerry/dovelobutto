@@ -4,12 +4,12 @@
   $(document).ready(function() {
     $("#input-bar").keyup(function()
     {
-      $.ajax( 
+      $.ajax(
           {
             dataType: "json",
             type: "POST",
             url: "api/suggestions.php",
-            data: { 
+            data: {
               "object" :  $("#input-bar").val()
             },
             success: function(data){
@@ -29,6 +29,7 @@
       e.preventDefault();
       if($("#input-bar").val() !== "")
       {
+        history.pushState('', '', '/?' + $(this).serialize());
         $.getJSON('/api/result.php', $(this).serialize()).then(function(data) {
           $('section').hide();
           $('#response-page')
