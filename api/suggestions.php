@@ -4,7 +4,7 @@
 
   $requested = $_POST['object'];
 
-  $sql = "SELECT product_name FROM products WHERE product_name LIKE '%".$requested."%'";
+  $sql = "SELECT product_name FROM products WHERE product_name LIKE '%".$requested."%' LIMIT 10 ";
   $sth = $db->query($sql);
   $rows = $sth->fetchAll(PDO::FETCH_OBJ);
   echo json_encode($rows);
