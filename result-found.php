@@ -1,9 +1,11 @@
 <div id="response" class="lets-move pop-up-2s">
   <figure>
-    <img id="found-img">
+    <img id="found-img"
+      <?php if ($result['bin']) echo "src='/assets/images/bin-".$result['bin'].".png' alt='Ricicla come ".$result['binName']."'"?>
+    >
   </figure>
   <article>
     <h4>Ricicla come</h4>
-    <h2 id="found-bin"></h2>
+    <h2 id="found-bin"><?= $result['binName'] ?></h2>
   </article>
 </div>
