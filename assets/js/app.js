@@ -20,11 +20,7 @@
                 }
               $("#input-bar").autocomplete({
 
-                /* Max 10 items will be displayed */
-                source : function(request, response) {
-                  var results = $.ui.autocomplete.filter(products, request.term);
-                  response(results.slice(0, 10));
-                }
+                source : products
               });
             }
       });
