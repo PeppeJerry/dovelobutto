@@ -1,57 +1,54 @@
 (function() {
-  'use strict';
+    'use strict';
 
-  $(document).ready(function() {
-    $("#input-bar").keyup(function()
-    {
-      $.ajax(
-          {
-            dataType: "json",
-            type: "POST",
-            url: "api/suggestions.php",
-            data: {
-              "object" :  $("#input-bar").val()
-            },
-            success: function(data){
-                var products = [];
-                for(var key in data) {
-                    var value = data[key].product_name;
-                    products.push(value);
+    $(document).ready(function() {
+        $("#input-bar").autocomplete({
+            minLength: 2,
+            source: function(request, response) {
+                var cache = [],
+                    term = request.term;
+
+                if (term in cache) {
+                    response(cache[term]);
+                    return;
                 }
-              $("#input-bar").autocomplete({
 
-                source : products
-              });
+                $.getJSON('api/suggestions.php', request, function(data) {
+                    cache[term] = data;
+                    response(data);
+                });
+            },
+            response: function(event, ui) {
+                $('section').hide();
+                $('#response-page')
+                    .attr('class', '')
+                    .addClass('response-page');
+
+                if (ui.content.length === 0) {
+                    $('#product-searched').text($("#input-bar").val());
+                    $('#product-name').val($("#input-bar").val());
+                    $('#section-not-found').show();
+                }
+            },
+            select: function(event, ui) {
+                history.pushState('', '', '/?object='+ ui.item.label);
+                $('section').hide();
+                $('#response-page')
+                    .attr('class', '')
+                    .addClass('response-page');
+
+                $('#found-bin').text(ui.item.bin_name);
+                $('#found-img')
+                    .attr('alt', 'Ricicla come ' + ui.item.bin_name)
+                    .attr('src', '/assets/images/bin-' + ui.item.bin_id + '.png');
+
+                $('#section-found').show();
+                $('#response-page').addClass('bin-'+ui.item.bin_id);
             }
-      });
-    });
-    $('.search-bar').on('submit', function(e) {
-      e.preventDefault();
-      if($("#input-bar").val() !== "")
-      {
-        history.pushState('', '', '/?' + $(this).serialize());
-        $.getJSON('/api/result.php', $(this).serialize()).then(function(data) {
-          $('section').hide();
-          $('#response-page')
-            .attr('class', '')
-            .addClass('response-page');
-
-          if (data.found) {
-            $('#found-bin').text(data.binName);
-            $('#found-img')
-              .attr('alt', 'Ricicla come ' + data.binName)
-              .attr('src', '/assets/images/bin-' + data.bin + '.png');
-            $('#section-found').show();
-            $('#response-page')
-              .addClass('bin-'+data.bin);
-          } else {
-            $('#product-searched').text(data.product_searched);
-            $('#product-name').val(data.product_searched);
-            $('#section-not-found').show();
-          }
         });
-      }
-    });
-  });
 
+        $('.search-bar').on('submit', function(e) {
+            e.preventDefault();
+        });
+    });
 })();

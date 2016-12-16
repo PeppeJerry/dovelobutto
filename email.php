@@ -1,17 +1,20 @@
-<?php 
-  $title = 'Email'; 
-  require('./partials/head.php'); 
-  $email_address = $_POST['email'];
-  $product_searched = $_POST['product-name'];
+<?php
+$title = 'Email';
 
-  $db = require_once "db.php";
-  $sql = "INSERT INTO emails(email_address,product_name) VALUES ('$email_address','$product_searched')"; // Add the email and the searched product submitted into the "emails" table in the database.
-  $sth = $db->query($sql);
+$db = require_once __DIR__.'/db.php';
+include __DIR__.'/partials/head.php';
+
+$email_address = $_POST['email'];
+$product_searched = $_POST['product-name'];
+
+// Add the email and the searched product submitted into the "emails" table in the database.
+$sql = "INSERT INTO unclassified_products (`email`,`name`) VALUES ('$email_address','$product_searched')";
+$db->query($sql);
 ?>
 
 <div class="email-page">
   <div class="navbar">
-    <?php require('./partials/header.php'); ?>
+    <?php include __DIR__.'/partials/header.php'; ?>
   </div>
 
   <div id="content">
@@ -20,12 +23,12 @@
     </figure>
 
     <article>
-      <p>Ti invieremo al più presto un'email a: <?php echo $email_address ?>
-      <p> Prodotto cercato : <?php echo $product_searched ?> </p>
+      <p>Ti invieremo al più presto un'email a: <?=$email_address;?>
+      <p> Prodotto cercato : <?=$product_searched;?> </p>
       <b></b></p>
-      <a href="index.php"><button class="button">Torna alla home</button></a>
+      <a href="/"><button class="button">Torna alla home</button></a>
     </article>
   </div>
 </div>
 
-<?php require('./partials/tail.php'); ?>
+<?php include __DIR__.'/partials/footer.php'; ?>
