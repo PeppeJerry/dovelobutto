@@ -42,14 +42,14 @@
             <img class="trash-image" src="/assets/images/trash.svg" role="presentation">
         </section>
 
-        <section class="section" id="section-found">
+        <section class="section section--found" id="section-found">
             <div id="response" class="lets-move pop-up-2s">
                 <figure>
-                    <img id="found-img">
+                    <img class="recycle-bin" src="/assets/images/bin-1.png">
                 </figure>
                 <article>
-                    <h4>Ricicla come</h4>
-                    <h2 id="found-bin"></h2>
+                    <h4 class="section--found__text">Ricicla come</h4>
+                    <h2 class="section--found__material">Plastica</h2>
                 </article>
             </div>
         </section>
@@ -57,15 +57,15 @@
         <section class="section" id="section-not-found">
             <h2>
                 Ci dispiace, non abbiamo trovato l'oggetto
-                <b id="product-searched"></b>
+                <b id="product-searched">Oggetto</b>
             </h2>
             <h3>Inserisci la tua email e ti contatteremo non appena lo sapremo!</h3>
             <form action="email.php" method="POST" accept-charset="utf-8">
-                <span style="display:block;">
-                    <input type="email" name="email" id="email-bar">
+                <span>
+                    <input placeholder="email@domain.com" type="email" name="email" class="input">
                 </span>
-                <span style="display:block;margin-top: 15px;">
-                    <input type="submit" value="Invia" class="button">
+                <span>
+                    <input type="submit" value="Invia" class="button button--primary">
                 </span>
                 <input type="hidden" id="product-name" name="product-name" value="">
             </form>

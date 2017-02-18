@@ -23,6 +23,40 @@ input {
     margin: 0;
 }
 
+.input {
+    border: 1px solid #d7d7d7;
+    border-radius: 3px 0 0 3px;
+    background-color: #e7e7e7;
+    text-align: center;
+    font-weight: bold;
+    color: #777;
+    padding: 5px 10px;
+    height: 44px;
+    font-size: 100%;
+    display: block;
+    width: 100%;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+.button {
+    font-size: 100%;
+    font-family: inherit;
+    height: 44px;
+    margin-left: 10px;
+    border: 1px solid #d7d7d7;
+    border-radius: 3px 0 0 3px;
+    background-color: #e7e7e7;
+    text-transform: uppercase;
+    padding: 5px 40px;
+}
+
+.button--primary {
+    background-color: #009688;
+    border-color: #009688;
+    color: #d7d7d7;
+}
+
 .header {
     text-align: center;
 }
@@ -106,6 +140,27 @@ input {
 
 .trash-image {
     display: none;
+}
+
+.recycle-bin {
+    width: 250px;
+    max-width: 100%;
+}
+
+.section--found__text {
+    font-size: 18px;
+    font-weight: initial;
+    margin-top: 50px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 0;
+}
+
+.section--found__material {
+    font-size: 26px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    line-height: 0;
 }
 
 @media (min-width: 768px) {
