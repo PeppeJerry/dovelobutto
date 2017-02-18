@@ -123,7 +123,7 @@ input {
     padding: 5px 10px;
 }
 
-.section {
+.page {
     min-height: 100vh;
     width: 70%;
     max-width: 700px;
@@ -134,8 +134,8 @@ input {
     justify-content: center;
 }
 
-.section--index {
-    animation: section-in 1s ease-out;
+.page--index {
+    animation: page-in 1s ease-out;
 }
 
 .trash-image {
@@ -147,7 +147,7 @@ input {
     max-width: 100%;
 }
 
-.section--found__text {
+.page--found__text {
     font-size: 18px;
     font-weight: initial;
     margin-top: 50px;
@@ -156,7 +156,7 @@ input {
     line-height: 0;
 }
 
-.section--found__material {
+.page--found__material {
     font-size: 26px;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -180,7 +180,7 @@ input {
 }
 
 @media (min-width: 768px) {
-    .section--index {
+    .page--index {
         width: calc(90% - 250px);
         margin-left: 30%;
     }
@@ -202,7 +202,7 @@ input {
     }
 }
 
-@keyframes section-in {
+@keyframes page-in {
     from {
         opacity: 0;
         padding-top: 20px;
