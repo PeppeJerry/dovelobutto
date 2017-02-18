@@ -101,7 +101,7 @@ input {
 }
 
 .section--index {
-    animation: section-in 1s ease-in;
+    animation: section-in 1s ease-out;
 }
 
 .trash-image {
@@ -129,13 +129,11 @@ input {
     from {
         transform: translate(-100%, -86%);
     }
-
-    to {
-        transform: translate(-40%, -86%);
-    }
 }
 
 @keyframes section-in {
-    from { opacity: 0 }
-    to { opacity: 1 }
+    from {
+        opacity: 0;
+        padding-top: 20px;
+    }
 }
