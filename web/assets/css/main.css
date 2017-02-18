@@ -163,6 +163,22 @@ input {
     line-height: 0;
 }
 
+.garbage-truck {
+    animation: garbage-truck 5s linear;
+    position: absolute;
+    height: 20%;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%)
+}
+
+.copyright {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    font-size: 10px;
+}
+
 @media (min-width: 768px) {
     .section--index {
         width: calc(90% - 250px);
@@ -190,5 +206,17 @@ input {
     from {
         opacity: 0;
         padding-top: 20px;
+    }
+}
+
+@keyframes garbage-truck {
+    from {
+        transform: translateX(-100%);
+        left: 0;
+    }
+
+    to {
+        transform: translateX(100%);
+        left: 100%;
     }
 }
