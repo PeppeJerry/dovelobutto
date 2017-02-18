@@ -3,14 +3,14 @@ html {
 }
 
 body {
-    background: #222;
-    color: #d7d7d7;
+    background-color: #FF7058;
+    color: #fff;
     margin: 0;
 }
 
 a {
     text-decoration: none;
-    color: #d7d7d7;
+    color: #fff;
 }
 
 h1 {
@@ -80,9 +80,9 @@ input {
 
 .navbar__submit {
     height: 42px;
-    background-color: #e74c3c;
+    background-color: #009688;
     color: #fff;
-    border: 1px solid #e74c3c;
+    border: 1px solid #009688;
     border-radius: 0 3px 3px 0;
     outline: 0;
     box-sizing: border-box;
@@ -92,9 +92,50 @@ input {
 .section {
     min-height: 100vh;
     width: 70%;
+    max-width: 700px;
     text-align: center;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.section--index {
+    animation: section-in 1s ease-in;
+}
+
+.trash-image {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .section--index {
+        width: calc(90% - 250px);
+        margin-right: 5%;
+    }
+
+    .trash-image {
+        display: block;
+        position: absolute;
+        width: 700px;
+        top: 100%;
+        left: 0;
+        animation: trash-in 2s ease-out;
+        transform: translate(-40%, -86%);
+    }
+}
+
+@keyframes trash-in {
+    from {
+        transform: translate(-100%, -86%);
+    }
+
+    to {
+        transform: translate(-40%, -86%);
+    }
+}
+
+@keyframes section-in {
+    from { opacity: 0 }
+    to { opacity: 1 }
 }
