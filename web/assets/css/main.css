@@ -111,7 +111,7 @@ input {
 @media (min-width: 768px) {
     .section--index {
         width: calc(90% - 250px);
-        margin-right: 5%;
+        margin-left: 30%;
     }
 
     .trash-image {
