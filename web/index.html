@@ -5,29 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>DoveLoButto</title>
-    <link rel="stylesheet" href="/assets/vendor/jquery-ui.min.css">
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="icon" href="/assets/images/recycle.png">
     <script src="https://code.jquery.com/jquery-3.1.1.js" defer></script>
-    <script src="/assets/vendor/jquery-ui.min.js" defer></script>
     <script type="text/javascript" src="/assets/js/app.js" defer></script>
 </head>
 <body>
-    <div id="response-page" class="response-page">
-        <div class="navbar">
-            <header>
-                <a href="/" class="is-centered">
-                    <img src="/assets/images/logo.svg" alt="DoveLoButto">
+    <main>
+        <nav class="navbar">
+            <header class="header">
+                <a href="/" class="header__link">
+                    <img class="header__image" src="/assets/images/logo.svg" alt="DoveLoButto">
                     <h1>DoveLoButto</h1>
                 </a>
             </header>
-            <form class="search-bar">
-                <input type="text" id="input-bar" name="object" placeholder="Ricicla ora..">
-                <input type="image" src="/assets/images/action-icon.svg" alt="Ricicla">
+            <form class="navbar__form">
+                <input class="navbar__input" type="text" placeholder="Ricicla ora..">
+                <input class="navbar__submit" type="image" src="/assets/images/action-icon.svg" alt="Ricicla">
             </form>
-        </div>
+        </nav>
 
-        <section id="section-index">
+        <header class="header">
+            <a href="/" class="header__link">
+                <img class="header__image" src="/assets/images/logo.svg" alt="DoveLoButto">
+                <h1>DoveLoButto</h1>
+            </a>
+        </header>
+
+
+        <section class="section" id="section-index">
             <p>
                 <strong>DoveLoButto</strong> ti permette di scoprire velocemente e
                 facilmente come riciclare tutto ciò che ti passa per le mani.
@@ -39,7 +45,7 @@
             </p>
         </section>
 
-        <section id="section-found">
+        <section class="section" id="section-found">
             <div id="response" class="lets-move pop-up-2s">
                 <figure>
                     <img id="found-img">
@@ -51,7 +57,7 @@
             </div>
         </section>
 
-        <section id="section-not-found">
+        <section class="section" id="section-not-found">
             <h2>
                 Ci dispiace, non abbiamo trovato l'oggetto
                 <b id="product-searched"></b>
@@ -67,7 +73,7 @@
                 <input type="hidden" id="product-name" name="product-name" value="">
             </form>
         </section>
-    </div>
+    </main>
 
 </body>
 </html>
