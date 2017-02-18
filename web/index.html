@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>DoveLoButto</title>
+    <link rel="stylesheet" href="/assets/vendor/jquery-ui.min.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="icon" href="/assets/images/recycle.png">
+    <script src="https://code.jquery.com/jquery-3.1.1.js" defer></script>
+    <script src="/assets/vendor/jquery-ui.min.js" defer></script>
+    <script type="text/javascript" src="/assets/js/app.js" defer></script>
+</head>
+<body>
+    <div id="response-page" class="response-page">
+        <div class="navbar">
+            <header>
+                <a href="/" class="is-centered">
+                    <img src="/assets/images/logo.svg" alt="DoveLoButto">
+                    <h1>DoveLoButto</h1>
+                </a>
+            </header>
+            <form class="search-bar">
+                <input type="text" id="input-bar" name="object" placeholder="Ricicla ora..">
+                <input type="image" src="/assets/images/action-icon.svg" alt="Ricicla">
+            </form>
+        </div>
+
+        <section id="section-index">
+            <p>
+                <strong>DoveLoButto</strong> ti permette di scoprire velocemente e
+                facilmente come riciclare tutto ciò che ti passa per le mani.
+            </p>
+            <p>
+                La raccolta differenziata non è facile come sembra e questo servizio
+                nasce apposta per facilitarla, fornendo alle persone uno strumento
+                utile e facile da usare.
+            </p>
+        </section>
+
+        <section id="section-found">
+            <div id="response" class="lets-move pop-up-2s">
+                <figure>
+                    <img id="found-img">
+                </figure>
+                <article>
+                    <h4>Ricicla come</h4>
+                    <h2 id="found-bin"></h2>
+                </article>
+            </div>
+        </section>
+
+        <section id="section-not-found">
+            <h2>
+                Ci dispiace, non abbiamo trovato l'oggetto
+                <b id="product-searched"></b>
+            </h2>
+            <h3>Inserisci la tua email e ti contatteremo non appena lo sapremo!</h3>
+            <form action="email.php" method="POST" accept-charset="utf-8">
+                <span style="display:block;">
+                    <input type="email" name="email" id="email-bar">
+                </span>
+                <span style="display:block;margin-top: 15px;">
+                    <input type="submit" value="Invia" class="button">
+                </span>
+                <input type="hidden" id="product-name" name="product-name" value="">
+            </form>
+        </section>
+    </div>
+
+</body>
+</html>
