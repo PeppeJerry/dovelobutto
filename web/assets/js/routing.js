@@ -1,7 +1,7 @@
 function go(page, data) {
-  $('.page').hide();
-  $('#page-' + page).show();
-
-  init($('#page-' + page), data);
-  initComponents();
+  getView(page).then(function(view) {
+    $('main').html(view);
+    init($('#page-' + page), data);
+    initComponents();
+  });
 }

@@ -24,3 +24,7 @@ function searchOne(name) {
     return data[0];
   });
 }
+
+function getView(name) {
+  return $.get('views/' + name + '.html');
+}
