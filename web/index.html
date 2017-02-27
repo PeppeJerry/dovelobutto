@@ -50,8 +50,8 @@
                         <h1>Dove lo butto</h1>
                     </header>
                 </a>
-                <form>
-                    <input type="text" placeholder="Ricicla ora">
+                <form class="js--search-form">
+                    <input class="js--autocomplete" type="text" name="name" placeholder="Ricicla ora">
                     <input type="submit" value="submit">
                 </form>
             </nav>
@@ -60,6 +60,7 @@
                 <div id="response">
                     <img class="image image--bin js--bin-image" src="">
                     <article>
+                        <h2 class="js--product-name">Prodotto</h2>
                         <h4>Ricicla come</h4>
                         <h2 class="js--bin-name">Bidone</h2>
                     </article>
@@ -75,8 +76,8 @@
                         <h1>Dove lo butto</h1>
                     </header>
                 </a>
-                <form>
-                    <input type="text" placeholder="Ricicla ora">
+                <form class="js--search-form">
+                    <input class="js--autocomplete" type="text" name="name" placeholder="Ricicla ora">
                     <input type="submit" value="submit">
                 </form>
             </nav>
@@ -84,10 +85,10 @@
             <div>
                 <h2>
                     Ci dispiace, non abbiamo trovato l'oggetto
-                    <b id="product-searched">Oggetto</b>
+                    <b class="js--product-name">Oggetto</b>
                 </h2>
                 <h3>Inserisci la tua email e ti contatteremo non appena lo sapremo!</h3>
-                <form action="email.php" method="POST" accept-charset="utf-8">
+                <form class="js--email-form">
                     <span>
                         <input placeholder="email@domain.com" type="email" name="email">
                     </span>
@@ -107,8 +108,8 @@
                         <h1>Dove lo butto</h1>
                     </header>
                 </a>
-                <form>
-                    <input type="text" placeholder="Ricicla ora">
+                <form class="js--search-form">
+                    <input class="js--autocomplete" type="text" name="name" placeholder="Ricicla ora">
                     <input type="submit" value="submit">
                 </form>
             </nav>
@@ -121,7 +122,7 @@
                 <img src="/assets/images/done.svg" role="presentation">
                 <h3>Prodotto cercato:<br /><span class="js--bin-name">PRODOTTO</span></h3>
                 <div>
-                    <a href="#">Torna indietro</a>
+                    <button class="js--go" data-route="index" />Torna indietro</button>
                 </div>
             </div>
         </main>

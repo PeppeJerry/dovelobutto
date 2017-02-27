@@ -1,5 +1,16 @@
 var PRODUCT_URL = 'https://dovelobutto.herokuapp.com/products';
 
+function saveProduct(name, email) {
+  return $.ajax(PRODUCT_URL, {
+    contentType: 'application/json',
+    data: JSON.stringify({
+      email: email,
+      name: name,
+    }),
+    method: 'post',
+  });
+}
+
 function search(name) {
   return $.getJSON(PRODUCT_URL, {
     name: name
