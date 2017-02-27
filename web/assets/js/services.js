@@ -26,5 +26,5 @@ function searchOne(name) {
 }
 
 function getView(name) {
-  return $.get('views/' + name + '.html');
+  return $.get('views/' + name + '.mustache');
 }

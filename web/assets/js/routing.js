@@ -1,7 +1,7 @@
 function go(page, data) {
   getView(page).then(function(view) {
-    $('main').html(view);
-    init($('#page-' + page), data);
+    var html = init(view, data);
+    $('main').html(html);
     initComponents();
   });
 }
