@@ -1,3 +1,5 @@
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 module.exports = {
   entry: './frontend/index.js',
   output: {
@@ -7,7 +9,9 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
+        use: ExtractTextPlugin.extract({
+          use: 'css-loader'
+        })
       },
       {
         test: /\.png$/,
@@ -18,5 +22,8 @@ module.exports = {
         use: [ 'file-loader' ]
       }
     ]
-  }
+  },
+  plugins: [
+    new ExtractTextPlugin('./web/assets/css/bundle.css'),
+  ]
 }
