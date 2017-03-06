@@ -6,13 +6,19 @@
   "author": "Coding Lab",
   "license": "MIT",
   "dependencies": {
+    "file-loader": "^0.10.1",
     "jquery": "^3.1.1",
     "jquery-ui": "^1.12.1",
     "mustache": "^2.3.0",
+    "url-loader": "^0.5.8",
     "webpack": "^2.2.1"
   },
   "scripts": {
     "start": "webpack --watch --devtool source-map",
     "build": "webpack"
+  },
+  "devDependencies": {
+    "css-loader": "^0.26.2",
+    "style-loader": "^0.13.2"
   }
 }
