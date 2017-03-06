@@ -20,6 +20,10 @@ module.exports = {
       {
         test: /\.jpg$/,
         use: [ 'file-loader' ]
+      },
+      {
+        test: /\.mustache$/,
+        use: [ 'raw-loader' ]
       }
     ]
   },

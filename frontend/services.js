@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import views from './views';
 
 var PRODUCT_URL = 'https://dovelobutto.herokuapp.com/products';
 
@@ -28,5 +29,5 @@ export function searchOne(name) {
 }
 
 export function getView(name) {
-  return $.get('/assets/views/' + name + '.mustache');
+  return Promise.resolve(views[name]);
 }
