@@ -1,3 +1,9 @@
+import Mustache from 'mustache';
+import $ from 'jquery';
+import 'jquery-ui/ui/widgets/autocomplete';
+import { go } from './routing';
+import { search, searchOne } from './services';
+
 function handleProduct(product) {
   if (product.bin) {
     go('found', {
@@ -12,7 +18,7 @@ function handleProduct(product) {
   }
 }
 
-function init(template, data) {
+export default function init(template, data) {
   if (!data) data = {};
 
   var html = Mustache.render(template, data);

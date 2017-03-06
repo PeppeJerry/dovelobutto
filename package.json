@@ -1,0 +1,18 @@
+{
+  "name": "dovelobutto",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:PugliaSOS/dovelobutto.git",
+  "author": "Coding Lab",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "jquery-ui": "^1.12.1",
+    "mustache": "^2.3.0",
+    "webpack": "^2.2.1"
+  },
+  "scripts": {
+    "start": "webpack --watch --devtool source-map",
+    "build": "webpack"
+  }
+}

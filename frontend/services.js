@@ -1,6 +1,8 @@
+import $ from 'jquery';
+
 var PRODUCT_URL = 'https://dovelobutto.herokuapp.com/products';
 
-function saveProduct(name, email) {
+export function saveProduct(name, email) {
   return $.ajax(PRODUCT_URL, {
     contentType: 'application/json',
     data: JSON.stringify({
@@ -11,7 +13,7 @@ function saveProduct(name, email) {
   });
 }
 
-function search(name) {
+export function search(name) {
   return $.getJSON(PRODUCT_URL, {
     name: name
   }).then(function(response) {
@@ -19,12 +21,12 @@ function search(name) {
   });
 }
 
-function searchOne(name) {
+export function searchOne(name) {
   return search(name).then(function(data) {
     return data[0];
   });
 }
 
-function getView(name) {
+export function getView(name) {
   return $.get('/assets/views/' + name + '.mustache');
 }
