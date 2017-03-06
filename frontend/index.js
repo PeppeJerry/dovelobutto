@@ -1,4 +1,2 @@
-import { go } from './routing';
-import './main.css';
-
-go('index');
+import './style/main.css';
+import './app';

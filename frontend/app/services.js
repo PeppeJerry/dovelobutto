@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import views from './views';
+import views from '../views';
 
 var PRODUCT_URL = 'https://dovelobutto.herokuapp.com/products';
 
