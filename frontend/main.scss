@@ -1,5 +1,8 @@
+$image-width: 100px;
+$bin-1-color: lightgrey;
+
 .image--bin {
-    width: 100px;
+    width: $image-width;
 }
 
 .page {
@@ -7,7 +10,7 @@
 }
 
 .bin--1 {
-    background-color: lightgrey;
+    background-color: $bin-1-color;
 }
 
 .bin--2 {
